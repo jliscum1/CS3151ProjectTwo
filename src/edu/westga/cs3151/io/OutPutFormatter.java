@@ -21,7 +21,7 @@ public class OutPutFormatter {
 		String outPut = "";
 		for (int i = 0; i <= STOP; i += STEP) {
 			this.testDriver.setArrayLengthAndPopulate(i);
-			outPut +=  this.testDriver.getTimeOfInsertionSort() + System.lineSeparator();
+			outPut += this.testDriver.getTimeOfInsertionSort() + System.lineSeparator();
 
 		}
 		return outPut;
@@ -56,8 +56,11 @@ public class OutPutFormatter {
 		}
 		return outPut;
 	}
+
 	/**
+	 * Generates output of quick sort
 	 * 
+	 * @return the output of the quick sort
 	 */
 	public String generateOutPutForQuickSort() {
 		String outPut = "";
@@ -67,5 +70,19 @@ public class OutPutFormatter {
 
 		}
 		return outPut;
+	}
+
+	/**
+	 * 
+	 */
+	public String generateOutPutForMergeSort() {
+		String outPut = "";
+		for (int i = 0; i <= STOP; i += STEP) {
+			this.testDriver.setArrayLengthAndPopulate(i);
+			outPut += this.testDriver.getTimeOfMergeSort() + System.lineSeparator();
+
+		}
+		return outPut;
+
 	}
 }
