@@ -11,6 +11,7 @@ import java.util.Random;
  */
 public class SortTools {
 	
+	
 	private final static Random rnd = new Random();
 	
 	private static <T> void swap(T[] data, int i, int j) {
