@@ -11,6 +11,10 @@ public class OutPutFormatter {
 		this.testDriver = new TestDriver();
 	}
 
+	public String headerOutPut() {
+		return "size, insertion sort, selection sort, bubble sort, quick sort, merge sort";
+	}
+
 	/**
 	 * Generates output for insertion sort
 	 * 
@@ -21,7 +25,7 @@ public class OutPutFormatter {
 
 		for (int i = 1000; i <= 100000; i += 1000) {
 			this.testDriver.setArrayLengthAndPopulate(i);
-			outPut += i + " " + this.testDriver.getTimeOfInsertionSort() + System.lineSeparator();
+			outPut += i + "," + this.testDriver.getTimeOfInsertionSort() + System.lineSeparator();
 
 		}
 		return outPut;
