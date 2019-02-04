@@ -30,10 +30,11 @@ public class TestDriver {
 	 * @return time of insertion sort
 	 */
 	public long getTimeOfInsertionSort() {
+		SortTools.shuffle(this.array);
 		long start = System.nanoTime();
 		SortTools.insertionSort(this.array);
 		long stop = System.nanoTime();
-		return start - stop;
+		return -1 * (start - stop);
 	}
 
 	/**
@@ -42,10 +43,11 @@ public class TestDriver {
 	 * @return time of the the selection sort
 	 */
 	public long getTimeOfSelectionSort() {
+		SortTools.shuffle(this.array);
 		long start = System.nanoTime();
 		SortTools.selectionSort(this.array);
 		long stop = System.nanoTime();
-		return start - stop;
+		return -1 * (start - stop);
 
 	}
 
@@ -55,10 +57,11 @@ public class TestDriver {
 	 * @return time of the bubble sort
 	 */
 	public long getTimeOfBubbleSort() {
+		SortTools.shuffle(this.array);
 		long start = System.nanoTime();
 		SortTools.bubbleSort(this.array);
 		long stop = System.nanoTime();
-		return start - stop;
+		return -1 * (start - stop);
 
 	}
 
@@ -68,10 +71,11 @@ public class TestDriver {
 	 * @return time of the merge sort
 	 */
 	public long getTimeOfMergeSort() {
+		SortTools.shuffle(this.array);
 		long start = System.nanoTime();
 		SortTools.mergeSort(this.array);
 		long stop = System.nanoTime();
-		return start - stop;
+		return -1 * (start - stop);
 	}
 
 	/**
@@ -80,10 +84,11 @@ public class TestDriver {
 	 * @return time of the quick sort
 	 */
 	public long getTimeOfQuickSort() {
+		SortTools.shuffle(this.array);
 		long start = System.nanoTime();
 		SortTools.mergeSort(this.array);
 		long stop = System.nanoTime();
-		return start - stop;
+		return -1 * (start - stop);
 	}
 
 }

@@ -6,7 +6,6 @@ public class OutPutFormatter {
 	public TestDriver testDriver;
 	private static final int STOP = 100;
 	private static final int STEP = 1;
-	private static final int REPEAT = 20;
 
 	public OutPutFormatter() {
 		this.testDriver = new TestDriver();
@@ -19,9 +18,10 @@ public class OutPutFormatter {
 	 */
 	public String generateOutPutForInsertionSort() {
 		String outPut = "";
-		for (int i = 0; i <= STOP; i += STEP) {
+
+		for (int i = 1000; i <= 100000; i += 1000) {
 			this.testDriver.setArrayLengthAndPopulate(i);
-			outPut += this.testDriver.getTimeOfInsertionSort() + System.lineSeparator();
+			outPut += i + " " + this.testDriver.getTimeOfInsertionSort() + System.lineSeparator();
 
 		}
 		return outPut;

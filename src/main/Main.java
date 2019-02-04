@@ -18,7 +18,8 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		OutPutFormatter formatter = new OutPutFormatter();
-		
+		System.out.print(formatter.generateOutPutForInsertionSort());
+
 	}
 
 }
