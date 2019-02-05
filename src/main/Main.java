@@ -3,8 +3,10 @@
  */
 package main;
 
+import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.io.PrintWriter;
 
 import edu.westga.cs3151.io.OutPutFormatter;
@@ -22,17 +24,19 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		OutPutFormatter formatter = new OutPutFormatter();
+		FileWriter writer = null;
 		try {
-			FileOutputStream stream = new FileOutputStream("sortdata.csv", true);
-			PrintWriter print = new PrintWriter(stream);
-			print.println(formatter.headerOutPut());
-			print.println(formatter.generateOutPutForSorts());
-			print.close();
-		} catch (FileNotFoundException e) {
+			File file = new File("data.csv");
+			writer = new FileWriter(file);
+			StringBuilder builder = new StringBuilder();
+			builder.append(formatter.headerOutPut());
+			builder.append(formatter.generateOutPutForSorts());
+			writer.append(builder.toString());
+			writer.close();
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		System.out.print("done");
-
+		System.out.println("done!");
 	}
 
 }
